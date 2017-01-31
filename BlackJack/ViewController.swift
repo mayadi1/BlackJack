@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var playerCardsImage: [UIImageView]!
+    var playerCardsImage = [UIImageView]()
     
     @IBOutlet weak var cardsStackView: UIStackView!
  
@@ -49,16 +49,32 @@ class ViewController: UIViewController {
 
     
     @IBAction func startButton(_ sender: Any) {
+       self.cardResult = 0
+        for view in self.playerCardsImage{
+        self.cardsStackView.removeArrangedSubview(view)
+        }
+        playerCardsImage.removeAll()
+
+        self.cardsStackView.reloadInputViews()
         let card1 = randomCardGenerator()
         let card2 = randomCardGenerator()
-        playerCardsImage[0].image = UIImage(named: String(card1))
-        playerCardsImage[1].image = UIImage(named: String(card2))
+        let cardImage1 = UIImageView()
+        let cardImage2 = UIImageView()
+       
+        cardImage1.image = UIImage(named: String(card1))
+        cardImage2.image = UIImage(named: String(card2))
+        playerCardsImage.append(cardImage1)
+        playerCardsImage.append(cardImage2)
+        self.cardsStackView.addArrangedSubview(cardImage1)
+        self.cardsStackView.addArrangedSubview(cardImage2)
+
         self.cardResult = card1 + card2
         displayPlayersCardsResult()
         
         //I can use fan out button in this case.
         standButton.isHidden = false
         hitButton.isHidden   = false
+       
     }
     
     //generate random card between 1 and 10 than retun that number back.

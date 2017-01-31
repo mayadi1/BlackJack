@@ -61,14 +61,6 @@
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iF1-oi-zQf">
                                 <rect key="frame" x="0.0" y="347" width="375" height="200"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KDA-RN-ta7">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="200"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJf-su-par">
-                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="200"/>
-                                    </imageView>
-                                </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="p8I-0Z-U4P"/>
                                 </constraints>
@@ -96,8 +88,6 @@
                         <outlet property="hitButton" destination="S4h-JA-5gQ" id="KD9-Gv-a9G"/>
                         <outlet property="playerCardsResult" destination="wfi-Mj-1YL" id="7gI-hg-aDB"/>
                         <outlet property="standButton" destination="WN6-rr-3q2" id="4A8-tX-WN0"/>
-                        <outletCollection property="playerCardsImage" destination="KDA-RN-ta7" id="Km0-bh-kZq"/>
-                        <outletCollection property="playerCardsImage" destination="GJf-su-par" id="RgT-oC-v2j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
