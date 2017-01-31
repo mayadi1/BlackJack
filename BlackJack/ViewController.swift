@@ -37,22 +37,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func hitButtonPressed(_ sender: Any) {
-        let card = UIImageView()
+        let cardNumber = randomCardGenerator()
+        let cardImage = UIImageView()
         //I should fix the card text alligment to center.
-        card.image = UIImage(named: "5_of_spades")
-        playerCardsImage.append(card)
-        self.cardsStackView.addArrangedSubview(card)
+        cardImage.image = UIImage(named: String(cardNumber))
+        playerCardsImage.append(cardImage)
+        self.cardsStackView.addArrangedSubview(cardImage)
+        self.cardResult = self.cardResult + cardNumber
         displayPlayersCardsResult()
-        
     }
 
     
     @IBAction func startButton(_ sender: Any) {
-       // playerCards[0].text = String(randomCardGenerator())
-        //playerCards[1].text = String(randomCardGenerator())
-       // playerCards[0].backgroundColor =  UIColor(patternImage: UIImage(named: "5_of_spades")!)
-
-        
+        let card1 = randomCardGenerator()
+        let card2 = randomCardGenerator()
+        playerCardsImage[0].image = UIImage(named: String(card1))
+        playerCardsImage[1].image = UIImage(named: String(card2))
+        self.cardResult = card1 + card2
         displayPlayersCardsResult()
         
         //I can use fan out button in this case.
