@@ -10,13 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var playerCardsImage: [UIImageView]!
+    
     @IBOutlet weak var cardsStackView: UIStackView!
  
-    @IBOutlet var playerCards: [UILabel]!
     @IBOutlet weak var playerCardsResult: UILabel!
     
     @IBOutlet weak var standButton: UIButton!
     @IBOutlet weak var hitButton: UIButton!
+    
+    var cardResult = 0
     
     override func viewDidLoad() {
         
@@ -34,10 +37,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func hitButtonPressed(_ sender: Any) {
-        let card = UILabel()
+        let card = UIImageView()
         //I should fix the card text alligment to center.
-        card.text = String(randomCardGenerator())
-        playerCards.append(card)
+        card.image = UIImage(named: "5_of_spades")
+        playerCardsImage.append(card)
         self.cardsStackView.addArrangedSubview(card)
         displayPlayersCardsResult()
         
@@ -45,8 +48,10 @@ class ViewController: UIViewController {
 
     
     @IBAction func startButton(_ sender: Any) {
-        playerCards[0].text = String(randomCardGenerator())
-        playerCards[1].text = String(randomCardGenerator())
+       // playerCards[0].text = String(randomCardGenerator())
+        //playerCards[1].text = String(randomCardGenerator())
+       // playerCards[0].backgroundColor =  UIColor(patternImage: UIImage(named: "5_of_spades")!)
+
         
         displayPlayersCardsResult()
         
@@ -62,11 +67,7 @@ class ViewController: UIViewController {
     
     //Display the results of the player current cards.
     func displayPlayersCardsResult(){
-        var result = 0
-        for card in playerCards{
-            result = result + Int(card.text!)!
-        }
-        playerCardsResult.text = String(result)
+        playerCardsResult.text = String(self.cardResult)
     }
 }
 

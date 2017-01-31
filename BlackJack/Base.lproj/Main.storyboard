@@ -60,27 +60,21 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iF1-oi-zQf">
-                                <rect key="frame" x="0.0" y="487" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="347" width="375" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="card1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYE-WI-rhR">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="card1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHg-iK-71g">
-                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KDA-RN-ta7">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="200"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJf-su-par">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="200"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="p8I-0Z-U4P"/>
+                                    <constraint firstAttribute="height" constant="200" id="p8I-0Z-U4P"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfi-Mj-1YL">
-                                <rect key="frame" x="166" y="452" width="42" height="21"/>
+                                <rect key="frame" x="166" y="273" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -102,8 +96,8 @@
                         <outlet property="hitButton" destination="S4h-JA-5gQ" id="KD9-Gv-a9G"/>
                         <outlet property="playerCardsResult" destination="wfi-Mj-1YL" id="7gI-hg-aDB"/>
                         <outlet property="standButton" destination="WN6-rr-3q2" id="4A8-tX-WN0"/>
-                        <outletCollection property="playerCards" destination="HYE-WI-rhR" id="DNo-il-5TE"/>
-                        <outletCollection property="playerCards" destination="LHg-iK-71g" id="WEc-wH-6VS"/>
+                        <outletCollection property="playerCardsImage" destination="KDA-RN-ta7" id="Km0-bh-kZq"/>
+                        <outletCollection property="playerCardsImage" destination="GJf-su-par" id="RgT-oC-v2j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
