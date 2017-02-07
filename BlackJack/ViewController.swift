@@ -53,9 +53,7 @@ class ViewController: UIViewController {
         for view in self.playerCardsImage{
         self.cardsStackView.removeArrangedSubview(view)
         }
-        playerCardsImage.removeAll()
-
-        self.cardsStackView.reloadInputViews()
+        
         let card1 = randomCardGenerator()
         let card2 = randomCardGenerator()
         let cardImage1 = UIImageView()
